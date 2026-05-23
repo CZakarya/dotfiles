@@ -1,8 +1,10 @@
-# Can be ignorespace ignoredups, or ignoreboth. https://www.gnu.org/software/bash/manual/html_node/Bash-History-Facilities.html
-HISTCONTROL=ignoreboth
 HISTFILE=~/.hist
 HISTSIZE=1000
 HISTFILESIZE=2000
+SAVEHIST=2000
+setopt appendhistory
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_SPACE
 
 
 bindkey -e
