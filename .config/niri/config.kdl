@@ -69,6 +69,7 @@ spawn-sh-at-startup "sleep 10 && kded6" // Wait a little bit before starting kde
 spawn-at-startup    "dolphin" "--daemon"
 spawn-at-startup    "elephant"
 spawn-sh-at-startup "sleep 2 && walker --gapplication-service"
+spawn-at-startup    "mako"
 // spawn-at-startup "cosmic-settings-daemon" // Makes bad changes to gsettings
 
 prefer-no-csd
