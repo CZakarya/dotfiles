@@ -11,17 +11,11 @@ HISTFILESIZE=2000
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
 
-use_color = true
-
-
 # Import aliases
 . $HOME/.config/shell/aliases.sh
 
 # Custom color prompt
 PS1='\[\e[32m\][\[\e[0m\] \[\e[36m\]\u\[\e[36m\]@\[\e[36m\]\H\[\e[0m\] \[\e[34m\]\w\[\e[0m\] \[\e[32m\]]\[\e[32m\]\$\[\e[0m\] '
-
-# Import env
-. $HOME/.config/shell/env.sh
 
 
 command -v zoxide &> /dev/null && eval "$(zoxide init bash)"
