@@ -10,25 +10,29 @@
 	"rounded_selection": true,
 	"buffer_line_height": "comfortable",
 	"agent_servers": {
-		"opencode": {
+		"pi-acp": {
+   "default_config_options": {
+    "thought_level": "high",
+    "model": "openai-codex/gpt-5.6-sol"
+   },
+   "type": "registry"
+  },
+  "opencode": {
 			"type": "registry",
 		},
 		"codex-acp": {
-			"favorite_config_option_values": {
-    "reasoning_effort": [
-     "low"
-    ]
-   },
-   "default_config_options": {
-				"reasoning_effort": "low",
+			"default_config_options": {
+				"model": "gpt-5.6-luna",
+    "mode": "agent-full-access",
+    "reasoning_effort": "medium",
 			},
 			"type": "registry",
 		},
 	},
 	"base_keymap": "Atom",
-	"show_edit_predictions": false,
+	"show_edit_predictions": true,
 	"edit_predictions": {
-		"provider": "none",
+		"provider": "zed",
 	},
 	"terminal": {
 		"font_family": "Hack",
@@ -83,13 +87,88 @@
 	"auto_update": false,
 	"ensure_final_newline_on_save": false,
 	"title_bar": {
-		"show_branch_status_icon": true,
+		"show_user_picture": false,
+  "show_user_menu": true,
+  "show_branch_status_icon": true,
 		"show_menus": false,
 		"button_layout": "platform_default",
 		"show_sign_in": false,
 	},
 	"agent": {
-		"dock": "left",
+		"sandbox_permissions": {
+   "write_paths": [
+    "~/Projects"
+   ],
+   "allow_all_hosts": true,
+   "allow_fs_write_all": true
+  },
+  "inline_assistant_model": {
+   "provider": "openai-subscribed",
+   "model": "gpt-6-luna",
+   "enable_thinking": true
+  },
+  "tool_permissions": {
+   "tools": {
+    "terminal": {
+     "default": "allow",
+     "always_allow": [
+      {
+       "pattern": "^git\\b"
+      },
+      {
+       "pattern": "^rg\\b"
+      },
+      {
+       "pattern": "^go\\s+test(\\s|$)"
+      },
+      {
+       "pattern": "^gofmt\\b"
+      },
+      {
+       "pattern": "^go\\s+doc(\\s|$)"
+      },
+      {
+       "pattern": "^sed\\b"
+      },
+      {
+       "pattern": "^ls\\b"
+      },
+      {
+       "pattern": "^grep\\b"
+      },
+      {
+       "pattern": "^make\\s+openapi-check(\\s|$)"
+      },
+      {
+       "pattern": "^wc\\b"
+      },
+      {
+       "pattern": "^make\\s+openapi-gen(\\s|$)"
+      },
+      {
+       "pattern": "^GOCACHE=/tmp/go-build\\s+go\\s+test(\\s|$)"
+      },
+      {
+       "pattern": "^find\\s+\\.(\\s|$)"
+      },
+      {
+       "pattern": "^sort\\b"
+      }
+     ]
+    }
+   }
+  },
+  "default_profile": "write",
+  "profiles": {
+
+  },
+  "default_model": {
+   "effort": "medium",
+   "provider": "zed.dev",
+   "model": "claude-opus-5-5",
+   "enable_thinking": true
+  },
+  "dock": "left",
 	},
 	"icon_theme": "Colored Zed Icons Theme Dark",
 	"buffer_font_family": "Noto Sans Mono",
