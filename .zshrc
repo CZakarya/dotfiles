@@ -24,9 +24,6 @@ source $HOME/.config/shell/keys.zsh
 # Custom color prompt
 PROMPT='%F{green}[ %F{cyan}%n@%M%f %F{blue}%~%f %F{green}]%#%f '
 
-# Import env
-. $HOME/.config/shell/env.sh
-
 
 command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
