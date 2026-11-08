@@ -25,6 +25,12 @@ source $HOME/.config/shell/keys.zsh
 PROMPT='%F{green}[ %F{cyan}%n@%M%f %F{blue}%~%f %F{green}]%#%f '
 
 
+# Path extensions
+PATH=$HOME/.local/bin:$PATH
+PATH=$BUN_INSTALL/bin:$PATH
+PATH=$CARGO_HOME/bin:$PATH
+
+
 command -v zoxide &> /dev/null && eval "$(zoxide init zsh)"
 
 
