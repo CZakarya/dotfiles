@@ -18,10 +18,6 @@ HISTFILESIZE=2000
 PS1='\[\e[32m\][\[\e[0m\] \[\e[36m\]\u\[\e[36m\]@\[\e[36m\]\H\[\e[0m\] \[\e[34m\]\w\[\e[0m\] \[\e[32m\]]\[\e[32m\]\$\[\e[0m\] '
 
 
-# Path extensions
-PATH=$HOME/.local/bin:$PATH
-PATH=$BUN_INSTALL/bin:$PATH
-PATH=$CARGO_HOME/bin:$PATH
 
 
 command -v zoxide &> /dev/null && eval "$(zoxide init bash)"

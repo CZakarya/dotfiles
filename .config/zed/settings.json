@@ -29,7 +29,7 @@
 			"type": "registry",
 		},
 	},
-	"base_keymap": "Atom",
+	"base_keymap": "Zed",
 	"show_edit_predictions": true,
 	"edit_predictions": {
 		"provider": "zed",
